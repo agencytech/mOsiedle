@@ -1,0 +1,211 @@
+* {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+  background: #fdfdfd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3d3d;
+}
+
+:root {
+  --text: #fd5959;
+  --shadow: #d44444;
+}
+
+.theme-shadow:hover {
+  box-shadow: 0px 13px 20px var(--text) !important;
+}
+
+.theme-shadow-hover:hover {
+  box-shadow: 0px 10px 20px var(--shadow) !important;
+}
+
+.theme-shadow-button:hover {
+  box-shadow: 0px 6px 20px var(--text) !important;
+}
+
+.theme-text {
+  color: var(--text) !important;
+}
+
+.theme-text-focus:focus {
+  color: var(--text) !important;
+}
+
+.theme-text-hover:hover {
+  color: var(--text) !important;
+}
+
+.theme-bg {
+  background-color: var(--text) !important;
+}
+
+.theme-bg-hover:hover {
+  background-color: var(--shadow) !important;
+}
+
+.theme-border {
+  border-color: var(--text) !important;
+}
+
+.theme-border-focus:focus {
+  border-color: var(--text) !important;
+}
+
+.theme-ring-focus:focus {
+  --tw-ring-color: var(--text);
+}
+
+.box-shadow {
+  box-shadow: 13px 14px 60px -13px var(--text);
+}
+
+.theme-bg-gradient {
+  background: rgb(14, 14, 14);
+  background: linear-gradient(
+    167deg,
+    #0e0e0e77 55%,
+    var(--text) 78%,
+    var(--shadow) 97%
+  );
+}
+
+.sidenav-button-active {
+  background-color: #1c1c1c97 !important;
+  color: var(--text) !important;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+input[type="checkbox"] {
+  /* Ukryj domyślny wygląd pola wyboru */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Ustaw niestandardowy rozmiar pola wyboru */
+  width: 20px;
+  height: 20px;
+  /* Dodaj niestandardowy wygląd */
+  border: 1px solid #3d3d3d; /* Kolor obramowania */
+  border-radius: 4px; /* Zakrąglenie */
+  position: relative;
+  background-color: #1c1c1c; /* Kolor tła */
+}
+
+input[type="checkbox"]:focus {
+  /* Zaznaczenie koloru obramowania po zaznaczeniu */
+  border-color: var(--text);
+  outline: none;
+  --tw-ring-inset: inset;
+  --tw-ring-offset-width: 0px;
+}
+
+/* Styl dla tła pola wyboru (checkbox) po zaznaczeniu */
+input[type="checkbox"]:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  /* Zaznaczenie koloru tła po zaznaczeniu */
+  background-color: var(--text);
+  /* Ustawienie rozmiaru tła */
+  width: 14px;
+  height: 14px;
+  /* Pozycjonowanie tła */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px; /* Zakrąglenie tła */
+}
+
+input[type="checkbox"]::before:focus {
+  /* Zaznaczenie koloru obramowania po zaznaczeniu */
+  border-color: var(--text);
+  outline: none;
+  --tw-ring-inset: inset;
+}
+
+.select2 {
+  width: 100% !important;
+  border-radius: 50px !important;
+}
+
+.select2-container--default .select2-selection--multiple {
+  background-color: #0e0e0e !important;
+  border: 1px solid #3d3d3d !important;
+  border-radius: 7px !important;
+}
+
+.select2-selection__choice {
+  background-color: #1c1c1c !important;
+  border: 0px solid #3d3d3d !important;
+  font-size: small !important;
+}
+
+.select2-selection__choice__remove {
+  border-right: 1px solid #3d3d3d !important;
+}
+
+.select2-dropdown {
+  background-color: #0e0e0e !important;
+  color: white !important;
+  font-size: small !important;
+  border: 1px solid #3d3d3d !important;
+  border-radius: 7px !important;
+}
+
+.select2-results__option--highlighted {
+  background-color: #1c1c1c !important;
+}
+
+.select2-results__option--selected {
+  background-color: #1c1c1c !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Odwrócenie kolorów dla ikony */
+  color: red; /* Dostosowanie koloru ikony */
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Odwrócenie kolorów dla ikony */
+  color: red; /* Dostosowanie koloru ikony */
+}
+
+input[type="radio"]:checked + label {
+  border-color: var(--text) !important;
+}
